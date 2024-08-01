@@ -1,47 +1,60 @@
 .header{
-    position: fixed;
     width: 100%;
-    height: 70px;
-    align-items: center;
-    /* border: 1px solid #fff; */
+    color: #fff;
+    background: #032541;
+    position: fixed;
+    z-index: 100;
+}
+.header-black{
+    background: #032541;
+}
+.header .inner{
+    margin: 0 auto;
+    width: 1300px;
+    height: 64px;
     display: flex;
     justify-content: space-between;
-    padding: 0 60px;
-    z-index: 100;
-    background: transparent;
-}
-/* header scroll event */
-.header-black{
-    background: #141414;
-}
-/* hgnb_wrap */
-.hgnb_wrap{
-    display: flex;
     align-items: center;
-    gap: 45px;
+    padding: 0 40px;
 }
 .header .logo{
-    width: 90px;
+    width: 154px;
+    cursor: pointer;
 }
-.hgnb_wrap ul.gnb{
+.header .hdwrap{
     display: flex;
-    gap: 22px;
-}
-
-
-/* icon_wrap */
-.icon_wrap{
-    display: flex;
+    gap: 25px;
     align-items: center;
-    gap: 22px;
+}
+.header .hdwrap .gnb{
+    display: flex;
+    gap: 30px;
+}
+.header .hdwrap .gnb li{
     position: relative;
 }
-.header .avatar{
-    width: 32px;
+
+
+
+
+/* 아이콘 */
+.header .iwrap{
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
-.icon_wrap span{
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
+.header .iwrap div:nth-child(2){
+    border: 1px solid #fff;
+    padding: 2px 4px;
+    box-sizing: border-box;
 }
+.header .iwrap div:nth-child(2):hover{
+    background: #fff;
+    color: #032541;
+}
+.header .iwrap .login_button{
+    cursor: pointer;
+}
+
+
+

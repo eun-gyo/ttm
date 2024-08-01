@@ -1,68 +1,60 @@
 import React from 'react';
 import './Footer.css';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF,faInstagram,faTwitter,faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+    const navi = useNavigate()
+    
+    // login page로 가는 함수
+    const handleLogin=()=>{
+        navi("/ttm/login")
+    }
 
+    const gomain=()=>[
+        navi("/ttm/index.html")
+    ]
+    
 
     return (
         <div className='footer'>
-            <FooterContainer>
-                <div className="footerContents">
-                    <div className='icon'>
-                        <FontAwesomeIcon icon={faFacebookF} />
-                        <FontAwesomeIcon icon={faInstagram} />
-                        <FontAwesomeIcon icon={faTwitter} />
-                        <FontAwesomeIcon icon={faYoutube} />
-                    </div>
-                    <div className="list_wrap">
-                        <ul>
-                            <li><a href="#">화면 해설</a></li>
-                            <li><a href="#">투자 정보(IR)</a></li>
-                            <li><a href="#">법적 고지</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">고객 센터</a></li>
-                            <li><a href="#">입사 정보</a></li>
-                            <li><a href="#">쿠키 설정</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">기프트 카드</a></li>
-                            <li><a href="#">이용 약관</a></li>
-                            <li><a href="#">회사 정보</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">미디어 센터</a></li>
-                            <li><a href="#">개인정보</a></li>
-                            <li><a href="#">문의하기</a></li>
-                        </ul>
-                    </div>
-                    <button>서비스 코드</button>
-                    <p>
-                        넷플릭스서비시스코리아 유한회사 통신판매업신고번호:제2018-서울종로-0426호 전화번호:00-308-0161 (수신자부담)<br/>
-                        대표:레지널드 숀 톰프슨<br/>
-                        이메일주소:korea@netflix.com<br/>
-                        주소:대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161<br/>
-                        사업자등록번호:165-87-00119<br/>
-                        클라우드 호스팅:Amazon Web Services Inc.<br/>
-                        공정거래위원회 웹사이트
-                    </p>
-                    
-                </div>
-            </FooterContainer>
+            <div className="footerlogo">
+                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
+                alt="푸터로고"
+                onClick={gomain}
+                />
+                <button onClick={handleLogin}>안녕하세요! 로그인 하시겠습니까?</button>
+            </div>
+            <div className="footerlist">
+                <ul>
+                    <li><span>기본정보</span></li>
+                    <li>TMDB는...</li>
+                    <li>문의하기</li>
+                    <li>토론 지원</li>
+                    <li>API</li>
+                    <li>시스템 상태</li>
+                </ul>
+                <ul>
+                    <li><span>참여하기</span></li>
+                    <li>기여 지침서</li>
+                    <li>새 영화 추가</li>
+                    <li>새 TV프로그램 추가</li>
+                </ul>
+                <ul>
+                    <li><span>커뮤니티</span></li>
+                    <li>가이드라인</li>
+                    <li>토론 내역</li>
+                    <li>기여 랭킹</li>
+                </ul>
+                <ul>
+                    <li><span>법적 사항</span></li>
+                    <li>서비스 이용약관</li>
+                    <li>API 이용약관</li>
+                    <li>개인정보약관</li>
+                    <li>DMCA 정책</li>
+                </ul>
+            </div>
         </div>
     )
 }
-
-const FooterContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 130px 0 30px;
-    width: 100%;
-`
-
 
 export default Footer

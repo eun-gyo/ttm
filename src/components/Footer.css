@@ -1,28 +1,47 @@
-.footerContents .icon{
+.footer{
+    width: 100%;
+    height: 325px;
+    background: #032541;
+    color: #fff;
     display: flex;
-    gap: 35px;
-    padding-left: 10px;
-    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
 }
-.list_wrap{
+.footer .footerlogo{
+    /* border: 1px solid #fff; */
     display: flex;
-    gap: 170px;
+    flex-direction: column;
+    align-items: end;
+    gap: 36px;
+    cursor: pointer;
 }
-.list_wrap li{
-    margin-bottom: 22px;
-}
-.list_wrap li a{
-    color: rgba(255,255,255,0.5);
-    font-size: 12px;
-}
-.footer button{
+.footer .footerlogo button{
+    background: #fff;
     padding: 10px;
-    border: 1px solid rgba(255,255,255,0.5);
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 22px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #009efd;
+    border-radius: 10px;
+
 }
-.footer p{
-    color: rgba(255,255,255,0.5);
+.footer .footerlogo img{
+    width: 130px;
+}
+/* footerlist */
+.footer .footerlist{
+    display: flex;
+    gap: 42px;
+}
+.footer .footerlist ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer .footerlist span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer .footerlist li{
     font-size: 12px;
-    line-height: 20px;
 }
