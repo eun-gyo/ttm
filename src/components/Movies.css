@@ -1,0 +1,22 @@
+.movies{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+.movies>h2{
+    margin-bottom: 20px;
+}
+.movies .inner .cardlist{
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+

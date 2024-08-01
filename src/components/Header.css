@@ -1,0 +1,60 @@
+.header{
+    width: 100%;
+    color: #fff;
+    background: #032541;
+    position: fixed;
+    z-index: 100;
+}
+.header-black{
+    background: #032541;
+}
+.header .inner{
+    margin: 0 auto;
+    width: 1300px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.header .logo{
+    width: 154px;
+    cursor: pointer;
+}
+.header .hdwrap{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.header .hdwrap .gnb{
+    display: flex;
+    gap: 30px;
+}
+.header .hdwrap .gnb li{
+    position: relative;
+}
+
+
+
+
+/* 아이콘 */
+.header .iwrap{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header .iwrap div:nth-child(2){
+    border: 1px solid #fff;
+    padding: 2px 4px;
+    box-sizing: border-box;
+}
+.header .iwrap div:nth-child(2):hover{
+    background: #fff;
+    color: #032541;
+}
+.header .iwrap .login_button{
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,39 @@
+.cards .imgbox{
+    width: 220px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 10px #999;
+    overflow: hidden;
+    object-fit: contain;
+}
+.cards .cardimg{
+    width: 220px;
+    height: 300px;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.cards .cardimg:hover{
+    transform: scale(1.1);
+}
+.cards h3{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.cards p{
+    color: #999;
+}
+.cards span{
+    position: relative;
+    color: #666;
+}
+.cards span+span::before{
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 15px;
+    background: #999;
+
+}
